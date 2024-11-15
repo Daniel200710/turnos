@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón</title>
+</head>
+<body>
+    <center>
+        <h1>Presiona el botón cuando termines de atender al cliente</h1>
+
+        <!-- Reproductor de audio en HTML -->
+        <audio id="clickAudio" src="sonidotur.mp3" preload="auto"></audio>
+
+        <!-- Botón que al hacer clic reproduce el sonido y redirige a otra página -->
+        <button onclick="reproducirSonido()">Termina de atender</button>
+
+        <script>
+            // Función para reproducir el sonido cuando se hace clic
+            function reproducirSonido() {
+                var audio = document.getElementById('clickAudio'); // Obtiene el elemento de audio
+                audio.play(); // Reproduce el sonido
+                // Redirige a la página 'caja.html' después de que el sonido haya empezado
+                setTimeout(function() {
+                    window.location.href = 'caja2.html'; 
+                }, 500); // Espera 500ms antes de redirigir
+            }
+        </script>
+    </center>
+</body>
+</html>
